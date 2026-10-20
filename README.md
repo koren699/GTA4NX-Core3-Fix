@@ -27,15 +27,15 @@ The original forwarder NPDM grants the process cores 0–2. In its two kernel ca
 - [Standalone NPDM](atmosphere/contents/03DB149512496000/exefs/main.npdm) and [NPDM verification notes](docs/TESTED_NPDM_DETAILS.txt)
 - Community tester reported that audio stuttering stopped and the game felt smoother. **Constant 30 FPS has not been demonstrated.** Your results may differ.
 
-## Overclock used in testing
+## Overclock used for current community testing
 
-| Hardware clock | Tested frequency |
+| Hardware clock | Frequency |
 | --- | ---: |
-| CPU | **1963 MHz** |
-| GPU | **768 MHz** |
-| RAM | **2131 MHz** |
+| CPU | **1963 MHz** (earlier sys-clk-OC screenshot) |
+| GPU | **921 MHz** (current tester-reported setting) |
+| RAM | **2131 MHz** (earlier sys-clk-OC screenshot) |
 
-These figures were observed in **sys-clk-OC, Handheld profile**, with the matching Title ID. **They are tested settings, not mandatory minimum clocks, and do not guarantee 30 FPS.** Higher frequencies may help, but only if available on your specific Switch and stable with safe temperatures, charging and cooling. Do not disable thermal safeguards or exceed safe limits. Some consoles may require lower clocks. An OLED console initially showed a 768 MHz GPU cap caused by a configured thermal/overclock limit; that was a profile limit, not evidence of a weaker GPU.
+**GPU 921 MHz is the tester's current overclock setting.** The older screenshot showed **GPU 768 MHz** because a configured temperature/overclock limit capped it; the tester has since corrected that setting on the OLED. CPU 1963 MHz and RAM 2131 MHz are from the earlier screenshot, so the table should not be interpreted as a single fully re-measured benchmark session. These frequencies are **reference settings, not mandatory requirements**, and do not guarantee 30 FPS. Higher GPU clocks are only appropriate where the individual console supports them and remains stable with adequate cooling, charging and safe temperatures. Do not disable thermal safeguards. Lower clocks may be necessary on other devices.
 
 ## Russian Text Mod compatibility
 
