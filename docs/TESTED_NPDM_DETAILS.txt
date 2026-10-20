@@ -1,0 +1,11 @@
+Tested GTA4NX HOME-menu forwarder NPDM for 03DB149512496000.
+
+Only ThreadInfo MaxCoreNumber changed in the ACI0 and ACID kernel capabilities:
+Before ACI0: 0x020073B7 -> After: 0x030073B7
+Before ACID: 0x020073B7 -> After: 0x030073B7
+Other NPDM fields unchanged.
+Patched main.npdm SHA-256: 79e356394589662cae4a8b8cf593d3a0c6f73467ab8c91d2dca74e0b8c2d8ca0
+
+Path on SD: atmosphere/contents/03DB149512496000/exefs/main.npdm
+Rollback: delete ONLY that main.npdm and reboot Atmosphere.
+Verify process affinity Core3 in local runtime logs; not all launch paths apply ExeFS overrides.
