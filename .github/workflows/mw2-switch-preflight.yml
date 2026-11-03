@@ -26,12 +26,17 @@ jobs:
         run: |
           set -euo pipefail
           echo "DEVKITPRO=$DEVKITPRO"
+          ls -ld "$DEVKITPRO"/libnx "$DEVKITPRO"/devkitA64 || true
+          export DEVKITA64="$DEVKITPRO/devkitA64"
+          export PATH="$DEVKITA64/bin:$PATH"
           test -f "$DEVKITPRO/libnx/switch_rules"
           command -v aarch64-none-elf-gcc
       - name: Build NRO
         shell: bash
         run: |
           set -euo pipefail
+          export DEVKITA64="$DEVKITPRO/devkitA64"
+          export PATH="$DEVKITA64/bin:$PATH"
           make -C mw2-switch -j2
           test -s mw2-switch/mw2-switch-preflight.nro
           ls -lh mw2-switch/mw2-switch-preflight.nro
